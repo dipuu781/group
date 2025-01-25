@@ -22,12 +22,12 @@ def handle_start(message):
             bot.send_message(message.chat.id, "❗ Aapko admin se approval lena hoga pehle. Admin ko DM karein @samy784")
             return
         else:
-            bot.send_message(message.chat.id, "🎉 Aapko access mil gaya hai! Attack start karne ke liye ip port duration bejein.\n🙏 Example format: `167.67.25 6296 120`")
+            bot.send_message(message.chat.id, "🎉 Aapko access mil gaya hai! Attack start karne ke liye ip port duration bejein.\n🙏 Example format: `167.67.25 6296 100`")
             return
 
     # If it's a group, give automatic access
     user_permissions[user_id] = 'approved'
-    bot.send_message(message.chat.id, "🎉 Aapko access mil gaya hai! Attack start karne ke liye ip port duration bejein.\n🙏 Example format: `167.67.25 6296 120`")
+    bot.send_message(message.chat.id, "🎉 Aapko access mil gaya hai! Attack start karne ke liye ip port duration bejein.\n🙏 Example format: `167.67.25 6296 100`")
 
 # Admin adds a user
 @bot.message_handler(commands=['add'])
@@ -78,7 +78,7 @@ def handle_attack_command(message):
         parts = message.text.split()
         if len(parts) != 3:
             bot.send_message(message.chat.id, "❗ Aapka attack format galat hai! Kripya IP, Port aur Duration sahi format mein bhejein.\n"
-                                              "Sahi format: `IP Port Duration`\nExample: `167.67.25 6296 120`.")
+                                              "Sahi format: `IP Port Duration`\nExample: `167.67.25 6296 100`.")
             return
         
         # Extract the IP, Port, and Duration
@@ -92,8 +92,8 @@ def handle_attack_command(message):
             return
         
         # Ensure the duration is within acceptable range
-        if duration > 300:
-            bot.send_message(message.chat.id, "❗ Attack ka maximum duration 300 seconds hai. Kripya duration kam karein.")
+        if duration > 100:
+            bot.send_message(message.chat.id, "❗ Attack ka maximum duration 100 seconds hai. Kripya duration kam karein.")
             return
         
         # Set flag to indicate an attack is in progress
