@@ -4,7 +4,7 @@ import logging
 import asyncio
 from threading import Thread
 
-TOKEN = "7889670543:AAFtwN5ijyKG2905-X9WvaPS43N1lNh3pyw"
+TOKEN = "7905527454:AAFU6FfZUXKYzShaiUAxAo1_ZNHGHTqzjww"
 ADMIN_ID = 6207079474  # Replace with your actual admin user ID
 
 bot = telebot.TeleBot(TOKEN)
